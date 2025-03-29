@@ -1,0 +1,6 @@
+flask
+flask-cors
+pymongo
+marshmallow
+python-dotenv
+google.generativeai
