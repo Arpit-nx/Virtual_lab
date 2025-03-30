@@ -4,6 +4,7 @@ import LabScene from "./components/LabScene";
 import Instructions from "./components/Instructions";
 import Chatbot from "./components/Chatbot"; // Importing the chatbot
 import "./App.css";
+import EquipmentPanel from "./components/EquipmentalPanel";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       </aside>
       <main className="lab-view">
         <LabScene />
+        <EquipmentPanel />
       </main>
       <section className="instructions">
         <Instructions />
