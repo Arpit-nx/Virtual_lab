@@ -155,4 +155,5 @@ const EquipmentPanel = () => {
     </div>
   );
 };
+
 export default EquipmentPanel;

@@ -113,9 +113,8 @@
 
 // export default ExperimentMenu;
 
-import React, { useState } from "react";
-import { useDrag, useDrop, DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
+import React from "react";
+import { useDrag } from "react-dnd";
 import { FaFlask, FaVial, FaTint, FaFunnelDollar, FaPencilRuler, FaThermometer, FaBalanceScale, FaSyringe } from "react-icons/fa";
 
 const ItemTypes = {
@@ -149,20 +148,16 @@ const DraggableItem = ({ item }) => {
   );
 };
 
-
 const ExperimentMenu = () => {
   return (
-    <DndProvider backend={HTML5Backend}>
-      <div style={menuStyle}>
-        <h3 style={{ color: "white" }}>Equipments</h3>
-        <ul style={listStyle}>
-          {equipmentList.map((item) => (
-            <DraggableItem key={item.id} item={item} />
-          ))}
-        </ul>
-      </div>
-      
-    </DndProvider>
+    <div style={menuStyle}>
+      <h3 style={{ color: "white" }}>Equipments</h3>
+      <ul style={listStyle}>
+        {equipmentList.map((item) => (
+          <DraggableItem key={item.id} item={item} />
+        ))}
+      </ul>
+    </div>
   );
 };
 
@@ -192,6 +187,7 @@ const listItemStyle = {
   fontSize: "24px",
 };
 
+// These are kept for reference but not currently used
 const dropZoneStyle = {
   width: "300px",
   height: "300px",
@@ -210,4 +206,3 @@ const droppedItemStyle = {
 };
 
 export default ExperimentMenu;
-
